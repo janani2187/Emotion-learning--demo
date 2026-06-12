@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Learning - Interactive Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Video Container -->
+        <div class="video-container">
+            <video id="emotionVideo" autoplay width="100%" height="auto">
+                <source src="emotion_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-text" id="progressText">Question 0 of 15</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Question Modal/Popup -->
+        <div id="questionModal" class="question-modal hidden">
+            <div class="question-backdrop"></div>
+            <div class="question-card">
+                <div class="question-text" id="questionText"></div>
+                
+                <!-- Answer Buttons -->
+                <div class="buttons-container">
+                    <button class="answer-button happy-button" data-answer="Happy">
+                        <span class="emoji">😊</span>
+                        <span class="button-text">Happy</span>
+                    </button>
+                    <button class="answer-button sad-button" data-answer="Sad">
+                        <span class="emoji">😢</span>
+                        <span class="button-text">Sad</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Message -->
+        <div id="feedbackMessage" class="feedback-message hidden">
+            <span id="feedbackText"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
